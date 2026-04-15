@@ -1,4 +1,11 @@
-"dependencies": {
-  "express": "latest",
-  "ws": "latest"
+{
+  "name": "ghzal-chat",
+  "type": "module",
+  "dependencies": {
+    "express": "latest",
+    "ws": "latest"
+  },
+  "scripts": {
+    "start": "node index.mjs"
+  }
 }
