@@ -1,11 +1,4 @@
-{
-  "name": "ghzal-chat",
-  "type": "module",
-  "scripts": {
-    "start": "node api-server/index.mjs"
-  },
-  "dependencies": {
-    "express": "latest",
-    "ws": "latest"
-  }
+"dependencies": {
+  "express": "latest",
+  "ws": "latest"
 }
