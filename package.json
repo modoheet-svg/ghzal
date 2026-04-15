@@ -6,6 +6,7 @@
     "start": "node scripts/index.mjs"
   },
   "dependencies": {
-    "express": "latest"
+    "express": "latest",
+    "ws": "latest"
   }
 }
