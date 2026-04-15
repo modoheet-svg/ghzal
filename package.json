@@ -1,10 +1,12 @@
 {
   "name": "ghzal-chat",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "start": "node scripts/index.mjs"
   },
   "dependencies": {
-    "express": "latest"
+    "express": "latest",
+    "ws": "latest"
   }
 }
