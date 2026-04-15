@@ -8,15 +8,14 @@ const wss = new WebSocketServer({ server });
 
 const PORT = process.env.PORT || 3000;
 
-// تشغيل الواجهة من المجلد الحالي
+// تشغيل الملفات من المجلد الرئيسي
 app.use(express.static('./')); 
 
 app.get('/', (req, res) => {
-    res.send('<h1>سيرفر شات غزال يعمل بنجاح!</h1><p>إذا كنت ترى هذه الرسالة، فالسيرفر متصل.</p>');
+    res.send('<h1>سيرفر شات غزال يعمل بنجاح!</h1>');
 });
 
 wss.on('connection', (ws) => {
-    console.log('متصل جديد');
     ws.on('message', (message) => {
         wss.clients.forEach(client => {
             if (client.readyState === 1) client.send(message.toString());
@@ -25,5 +24,5 @@ wss.on('connection', (ws) => {
 });
 
 server.listen(PORT, '0.0.0.0', () => {
-    console.log(`السيرفر يعمل الآن على المنفذ ${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
 });
