@@ -1,0 +1,263 @@
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--gold:#f5a623;--gl:#ffd166;--gd:#d4860a;--deep:#0a1628;--mid:#0d2444;--w:#fff;--mut:#90b4d4;--grn:#00e676;}
+html,body{height:100%;overflow:hidden;font-family:'Cairo',sans-serif;background:var(--deep);color:var(--w);}
+.bg{position:fixed;inset:0;z-index:0;background:radial-gradient(ellipse at 20% 50%,rgba(21,101,192,.3),transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(245,166,35,.15),transparent 50%),linear-gradient(135deg,#050d1a,#0a1628,#0d2444);}
+.stars{position:fixed;inset:0;z-index:0;overflow:hidden;}
+.star{position:absolute;border-radius:50%;background:white;animation:tw linear infinite;}
+@keyframes tw{0%,100%{opacity:0}50%{opacity:1}}
+
+/* LANDING */
+#landing{position:relative;z-index:1;height:100vh;display:flex;flex-direction:column;overflow-y:auto;}
+
+/* ===== THEME SYSTEM ===== */
+:root{
+  --t-bg1:#050d1a; --t-bg2:#0a1628; --t-bg3:#0d2444;
+  --t-accent:#f5a623; --t-accent2:#ffd166; --t-glow:rgba(245,166,35,.4);
+  --t-card:rgba(255,255,255,.03); --t-border:rgba(255,255,255,.08);
+  --t-hdr:rgba(255,255,255,.03);
+}
+/* ===== THEME 2: EMERALD NIGHT ===== */
+
+.site-hdr{padding:14px 32px;display:flex;align-items:center;justify-content:space-between;background:var(--t-hdr);backdrop-filter:blur(20px);border-bottom:1px solid rgba(245,166,35,.15);flex-shrink:0;}
+
+
+/* ===== THEME: CLASSIC (كلاسيك — مشابه لصدى العراق) ===== */
+body.theme-classic{
+  --t-bg1:#f0f2f5;--t-bg2:#ffffff;--t-bg3:#e3f2fd;
+  --t-accent:#1565c0;--t-accent2:#1976d2;--t-glow:rgba(21,101,192,.35);
+  --t-card:rgba(21,101,192,.04);--t-border:rgba(21,101,192,.12);--t-hdr:rgba(21,101,192,.95);
+  --gold:#1565c0;--gl:#1976d2;--gd:#0d47a1;--deep:#f0f2f5;--mid:#ffffff;--w:#1a1a2e;--mut:#546e7a;--grn:#2e7d32;
+  color:#1a1a2e;
+}
+body.theme-classic .bg{background:#e8edf5;display:none;}
+body.theme-classic .stars{display:none;}
+body.theme-classic{background:#e8edf5!important;}
+/* Header */
+body.theme-classic .chat-hdr{background:#1565c0!important;border-bottom:2px solid #0d47a1!important;backdrop-filter:none;}
+body.theme-classic .clogo-t{background:linear-gradient(135deg,#fff,#bbdefb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+body.theme-classic .clogo-ic{background:linear-gradient(135deg,#fff,#90caf9);}
+body.theme-classic .cnav-btn{color:rgba(255,255,255,.8);}
+body.theme-classic .cnav-btn:hover,body.theme-classic .cnav-btn.on{background:rgba(255,255,255,.22)!important;color:#fff!important;}
+body.theme-classic .sbdg{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.25);color:#fff;}
+body.theme-classic .sdot{background:#69f0ae;box-shadow:0 0 6px #69f0ae;}
+body.theme-classic .btn.btn-g{color:rgba(255,255,255,.85);border-color:rgba(255,255,255,.3);}
+body.theme-classic .btn.btn-g:hover{background:rgba(255,255,255,.15);}
+/* Panels */
+body.theme-classic .rpanel,body.theme-classic .upanel{background:#ffffff!important;box-shadow:2px 0 8px rgba(0,0,0,.08);}
+body.theme-classic .rpanel{border-left:1px solid #dde3ec!important;}
+body.theme-classic .upanel{border-right:1px solid #dde3ec!important;}
+body.theme-classic .phdr{color:#1565c0!important;border-bottom:1px solid #e3e8f0!important;background:#f5f7fc;}
+body.theme-classic .slist::-webkit-scrollbar-thumb{background:rgba(21,101,192,.25);}
+body.theme-classic .ri{color:#2c3e50;border-color:transparent;}
+body.theme-classic .ri:hover{background:rgba(21,101,192,.07)!important;border-color:rgba(21,101,192,.18)!important;}
+body.theme-classic .ri.on{background:rgba(21,101,192,.14)!important;border-color:rgba(21,101,192,.35)!important;}
+body.theme-classic .r-nm{color:#1a2740;}
+body.theme-classic .r-cn{color:#6b7f99;}
+/* Chat main area */
+body.theme-classic .cmain{background:#eef1f7!important;}
+body.theme-classic .crhdr{background:#ffffff!important;border-bottom:1px solid #dde3ec!important;}
+body.theme-classic .cr-nm{color:#1a2740;}
+body.theme-classic .cr-sb{color:#546e7a;}
+/* Messages */
+body.theme-classic .msgs{background:#eef1f7!important;}
+body.theme-classic .msgs::-webkit-scrollbar-thumb{background:rgba(21,101,192,.18);}
+body.theme-classic .msg:hover{background:rgba(21,101,192,.04);}
+body.theme-classic .mn{color:#1565c0!important;}
+body.theme-classic .mt{color:#90a4ae!important;}
+body.theme-classic .mx{color:#263238!important;}
+body.theme-classic .mb{filter:none;}
+body.theme-classic .sys{background:rgba(21,101,192,.07)!important;color:#1565c0!important;border:1px solid rgba(21,101,192,.15)!important;}
+body.theme-classic .welcome{background:rgba(21,101,192,.07)!important;border-color:rgba(21,101,192,.2)!important;color:#1565c0!important;}
+/* Input area */
+body.theme-classic .cin-area{background:#ffffff!important;border-top:1px solid #dde3ec!important;}
+body.theme-classic .cin-bar{background:#f0f4fa!important;border-color:#dde3ec!important;}
+body.theme-classic .cin-bar:focus-within{border-color:#1565c0!important;background:#fff!important;}
+body.theme-classic .cin{color:#1a2740!important;}
+body.theme-classic .cin::placeholder{color:#90a4ae!important;}
+/* Buttons in chat */
+body.theme-classic .ib{color:#546e7a;border-color:#dde3ec;}
+body.theme-classic .ibs{background:linear-gradient(135deg,#1565c0,#1976d2)!important;color:#fff!important;}
+/* Forms & inputs in modals */
+body.theme-classic .overlay{background:rgba(0,0,50,.45)!important;}
+body.theme-classic .modal{background:#ffffff!important;border-color:rgba(21,101,192,.2)!important;color:#1a2740;}
+body.theme-classic .modal::before{background:linear-gradient(90deg,transparent,#1565c0,#1976d2,#1565c0,transparent)!important;}
+body.theme-classic .mhdr{color:#1a2740;}
+body.theme-classic .fi{background:#f5f7fc;border-color:#dde3ec;color:#1a2740;}
+body.theme-classic .fi:focus{border-color:#1565c0;background:#fff;}
+body.theme-classic .fl{color:#546e7a;}
+body.theme-classic .fmsg{color:#1565c0;}
+body.theme-classic .btn-p{background:linear-gradient(135deg,#1565c0,#1976d2,#0d47a1)!important;}
+body.theme-classic .btn-g{color:#1565c0!important;border-color:rgba(21,101,192,.35)!important;}
+body.theme-classic .btn-g:hover{background:rgba(21,101,192,.1)!important;}
+/* Landing page */
+body.theme-classic #landing{background:#f0f2f5;color:#1a2740;}
+body.theme-classic .site-hdr{background:rgba(21,101,192,.97)!important;border-bottom-color:rgba(21,101,192,.3)!important;}
+body.theme-classic .logo-t{background:linear-gradient(135deg,#fff,#bbdefb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+body.theme-classic .hero-badge{background:rgba(21,101,192,.1)!important;border-color:rgba(21,101,192,.3)!important;color:#1565c0!important;}
+body.theme-classic .hero-p{color:#546e7a;}
+body.theme-classic .hero-h{color:#1a2740;}
+body.theme-classic .hero-h .g{background:linear-gradient(135deg,#1565c0,#42a5f5,#0d47a1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+body.theme-classic .btn-s{border-color:rgba(21,101,192,.2);}
+/* Theme picker modal itself */
+body.theme-classic #theme-picker-box{background:#ffffff!important;border-color:rgba(21,101,192,.2)!important;color:#1a2740;}
+body.theme-classic .theme-opt{color:#1a2740;border-color:rgba(21,101,192,.15);}
+/* Scrollbar overall */
+body.theme-classic ::-webkit-scrollbar-thumb{background:rgba(21,101,192,.25)!important;}
+/* Mobile nav */
+body.theme-classic .mob-nav{background:#1565c0!important;border-top:1px solid #0d47a1!important;}
+body.theme-classic .mob-nav-btn{color:rgba(255,255,255,.7)!important;}
+body.theme-classic .mob-nav-btn.active{color:#fff!important;background:rgba(255,255,255,.15)!important;}
+/* Admin panel */
+body.theme-classic .rpanel .phdr{background:#f5f7fc;}
+/* ===== END CLASSIC THEME ===== */
+/* ===== LITE THEME VARIABLES ===== */
+body.theme-lite{
+  --t-bg1:#ededed;--t-bg2:#ffffff;--t-bg3:#a1bbe0;
+  --t-accent:#5987c9;--t-accent2:#6892ce;--t-glow:rgba(89,135,201,.35);
+  --t-card:rgba(89,135,201,.04);--t-border:rgba(89,135,201,.12);--t-hdr:rgba(89,135,201,.95);
+  --gold:#5987c9;--gl:#6892ce;--gd:#0d47a1;--deep:#ededed;--mid:#ffffff;--w:#000;--mut:#546e7a;--grn:#2e7d32;
+  color:#000;
+}
+body.theme-lite .bg{background:#a1bbe0bd;display:none;}
+body.theme-lite .stars{display:none;}
+body.theme-lite{background:#a1bbe0bd!important;}
+body.theme-lite .chat-hdr{background:linear-gradient(to bottom,#ffffff 0%,#6892ce 50%,#5987c9 52%,#5987c9 100%)!important;border-bottom:2px solid #0d47a1!important;backdrop-filter:none;}
+body.theme-lite .rpanel,body.theme-lite .upanel{background:#ffffff!important;box-shadow:2px 0 8px rgba(0,0,0,.08);}
+body.theme-lite .rpanel{border-left:1px solid #dde3ec!important;}
+body.theme-lite .upanel{border-right:1px solid #dde3ec!important;}
+body.theme-lite .phdr{color:#5987c9!important;border-bottom:1px solid #e3e8f0!important;background:#f5f7fc;}
+body.theme-lite .cmain{background:#eef1f7!important;}
+body.theme-lite .msgs{background:#eef1f7!important;}
+body.theme-lite .mx{color:#000!important;}
+body.theme-lite .mn{color:#5987c9!important;}
+body.theme-lite .mt{color:#90a4ae!important;}
+body.theme-lite .cin-area{background:#ffffff!important;border-top:1px solid #dde3ec!important;}
+body.theme-lite .cin-bar{background:#f0f4fa!important;border-color:#dde3ec!important;}
+body.theme-lite .cin{color:#1a2740!important;}
+body.theme-lite .overlay{background:rgba(0,0,50,.45)!important;}
+body.theme-lite .modal{background:#ffffff!important;border-color:rgba(89,135,201,.2)!important;color:#1a2740;}
+body.theme-lite .fi{background:#f5f7fc;border-color:#dde3ec;color:#1a2740;}
+body.theme-lite .btn-p{background:linear-gradient(135deg,#5987c9,#6892ce,#0d47a1)!important;}
+body.theme-lite .site-hdr{background:linear-gradient(to bottom,#ffffff 0%,#6892ce 50%,#5987c9 52%,#5987c9 100%)!important;}
+body.theme-lite .mob-nav{background:linear-gradient(to bottom,#ffffff 0%,#6892ce 50%,#5987c9 52%,#5987c9 100%)!important;}
+body.theme-lite .sys{background:rgba(89,135,201,.07)!important;color:#5987c9!important;border:1px solid rgba(89,135,201,.15)!important;}
+body.theme-lite .crhdr{background:#ffffff!important;border-bottom:1px solid #dde3ec!important;}
+body.theme-lite .ibs{background:linear-gradient(135deg,#5987c9,#6892ce)!important;color:#fff!important;}
+body.theme-lite .ri:hover{background:rgba(89,135,201,.07)!important;border-color:rgba(89,135,201,.18)!important;}
+body.theme-lite .ri.on{background:rgba(89,135,201,.14)!important;border-color:rgba(89,135,201,.35)!important;}
+/* ===== END LITE VARIABLES ===== */
+
+/* ===== CLASSIC & LITE — إصلاح شامل لألوان النصوص على الخلفيات الفاتحة ===== */
+
+/* ---- عناصر مشتركة بين الثيمين ---- */
+body.theme-classic, body.theme-lite {
+  /* إعادة تعريف متغيرات الألوان الأساسية للنصوص */
+}
+
+/* النصوص العامة في الشات */
+body.theme-classic .msg-txt, body.theme-lite .msg-txt,
+body.theme-classic .msg-content, body.theme-lite .msg-content { color:#1a2740!important; }
+
+/* أسماء المستخدمين في قائمة الأعضاء */
+body.theme-classic .u-nm, body.theme-lite .u-nm { color:#1a2740!important; }
+body.theme-classic .u-rk, body.theme-lite .u-rk { color:#546e7a!important; }
+body.theme-classic .ui, body.theme-lite .ui { color:#1a2740!important; }
+
+/* الرسائل الخاصة PM */
+body.theme-classic #pm, body.theme-lite #pm { background:#fff!important; color:#1a2740!important; }
+body.theme-classic .pm-msg, body.theme-lite .pm-msg { color:#1a2740!important; }
+body.theme-classic .pm-hdr, body.theme-lite .pm-hdr { background:#f5f7fc!important; color:#1a2740!important; border-bottom:1px solid #dde3ec!important; }
+body.theme-classic .pm-msgs, body.theme-lite .pm-msgs { background:#f0f4fa!important; }
+body.theme-classic .pm-inp, body.theme-lite .pm-inp { background:#fff!important; border-top:1px solid #dde3ec!important; }
+body.theme-classic .pm-cin, body.theme-lite .pm-cin { color:#1a2740!important; background:#f5f7fc!important; border-color:#dde3ec!important; }
+body.theme-classic .pm-cin::placeholder, body.theme-lite .pm-cin::placeholder { color:#90a4ae!important; }
+body.theme-classic .pm-bubble, body.theme-lite .pm-bubble { color:#1a2740!important; }
+body.theme-classic .pm-bubble.mine, body.theme-lite .pm-bubble.mine { color:#fff!important; }
+
+/* الـ overlays والـ modals */
+body.theme-classic .ov-title, body.theme-lite .ov-title,
+body.theme-classic .ov-hdr, body.theme-lite .ov-hdr { color:#1a2740!important; }
+body.theme-classic .ov-body, body.theme-lite .ov-body { color:#1a2740!important; }
+body.theme-classic [class*="-ov"] .modal, body.theme-lite [class*="-ov"] .modal { color:#1a2740!important; }
+
+/* لوحة الأدمن */
+body.theme-classic .admin-panel, body.theme-lite .admin-panel { background:#fff!important; color:#1a2740!important; }
+body.theme-classic .admin-panel *, body.theme-lite .admin-panel * { color:#1a2740; }
+body.theme-classic .adm-hdr, body.theme-lite .adm-hdr { background:#f5f7fc!important; color:#1a2740!important; border-bottom:1px solid #dde3ec!important; }
+body.theme-classic .adm-tab, body.theme-lite .adm-tab { color:#546e7a!important; }
+body.theme-classic .adm-tab.on, body.theme-lite .adm-tab.on { color:#1565c0!important; }
+
+/* الملف الشخصي */
+body.theme-classic #profile-ov .modal, body.theme-lite #profile-ov .modal { background:#fff!important; color:#1a2740!important; }
+body.theme-classic .prof-name, body.theme-lite .prof-name { color:#1a2740!important; }
+body.theme-classic .prof-info, body.theme-lite .prof-info { color:#546e7a!important; }
+body.theme-classic .prof-stat-val, body.theme-lite .prof-stat-val { color:#1a2740!important; }
+body.theme-classic .prof-stat-lbl, body.theme-lite .prof-stat-lbl { color:#546e7a!important; }
+body.theme-classic .prof-bio, body.theme-lite .prof-bio { color:#1a2740!important; background:#f5f7fc!important; }
+
+/* الإعدادات والضبط */
+body.theme-classic .set-lbl, body.theme-lite .set-lbl { color:#1a2740!important; }
+body.theme-classic .set-desc, body.theme-lite .set-desc { color:#546e7a!important; }
+body.theme-classic .set-section-title, body.theme-lite .set-section-title { color:#1565c0!important; }
+
+/* الأخبار والإشعارات */
+body.theme-classic .news-item, body.theme-lite .news-item { color:#1a2740!important; background:#f5f7fc!important; border-color:#dde3ec!important; }
+body.theme-classic .news-title, body.theme-lite .news-title { color:#1a2740!important; }
+body.theme-classic .news-body, body.theme-lite .news-body { color:#546e7a!important; }
+
+/* الصندوق الوارد */
+body.theme-classic .inbox-item, body.theme-lite .inbox-item { color:#1a2740!important; background:#f5f7fc!important; }
+body.theme-classic .inbox-from, body.theme-lite .inbox-from { color:#1565c0!important; }
+body.theme-classic .inbox-msg, body.theme-lite .inbox-msg { color:#546e7a!important; }
+
+/* الأصدقاء */
+body.theme-classic #friends-ov .modal, body.theme-lite #friends-ov .modal { background:#fff!important; color:#1a2740!important; }
+body.theme-classic #friends-list-tab *, body.theme-lite #friends-list-tab * { color:#1a2740!important; }
+body.theme-classic #friends-requests-tab *, body.theme-lite #friends-requests-tab * { color:#1a2740!important; }
+
+/* اليوميات */
+body.theme-classic .diary-post, body.theme-lite .diary-post { background:#f5f7fc!important; color:#1a2740!important; border-color:#dde3ec!important; }
+body.theme-classic .diary-post-txt, body.theme-lite .diary-post-txt { color:#1a2740!important; }
+
+/* المسابقات */
+body.theme-classic .quiz-q, body.theme-lite .quiz-q { color:#1a2740!important; }
+body.theme-classic .quiz-opt, body.theme-lite .quiz-opt { color:#1a2740!important; background:#f5f7fc!important; border-color:#dde3ec!important; }
+
+/* الـ toast */
+body.theme-classic .toast, body.theme-lite .toast { color:#fff!important; }
+
+/* شريط الهيدر السفلي desk-second-bar */
+body.theme-classic .desk-second-bar, body.theme-lite .desk-second-bar { background:#fff!important; border-color:#dde3ec!important; }
+body.theme-classic .desk-second-bar *, body.theme-lite .desk-second-bar * { color:#1a2740!important; }
+
+/* الموبايل */
+body.theme-classic .mob-top-bar, body.theme-lite .mob-top-bar { background:#f5f7fc!important; border-bottom:1px solid #dde3ec!important; }
+body.theme-classic .mob-top-bar *, body.theme-lite .mob-top-bar * { color:#1a2740!important; }
+body.theme-classic .mob-nav-btn, body.theme-lite .mob-nav-btn { color:rgba(255,255,255,.8)!important; }
+body.theme-classic .mob-nav-btn.active, body.theme-lite .mob-nav-btn.active { color:#fff!important; }
+
+/* الـ upanel tabs */
+body.theme-classic .upanel-tab, body.theme-lite .upanel-tab { color:#546e7a!important; border-color:#dde3ec!important; }
+body.theme-classic .upanel-tab.active, body.theme-lite .upanel-tab.active { color:#1565c0!important; border-color:#1565c0!important; background:rgba(21,101,192,.08)!important; }
+body.theme-lite .upanel-tab.active { color:#5987c9!important; border-color:#5987c9!important; }
+
+/* الـ ucbar عدد المتصلين */
+body.theme-classic .ucbar, body.theme-lite .ucbar { color:#546e7a!important; }
+
+/* أزرار الإجراءات العامة */
+body.theme-classic .act-btn, body.theme-lite .act-btn { color:#1a2740!important; }
+
+/* إصلاح نصوص بيضاء على خلفية بيضاء في lite */
+body.theme-lite .clogo-t { background:linear-gradient(135deg,#fff,#bbdefb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text; }
+body.theme-lite .cnav-btn { color:rgba(255,255,255,.85)!important; }
+body.theme-lite .cnav-btn:hover, body.theme-lite .cnav-btn.on { background:rgba(255,255,255,.22)!important; color:#fff!important; }
+body.theme-lite .sbdg { color:#fff!important; }
+body.theme-lite .cr-nm { color:#1a2740!important; }
+body.theme-lite .cr-sb { color:#546e7a!important; }
+body.theme-lite .r-nm { color:#1a2740!important; }
+body.theme-lite .r-cn { color:#546e7a!important; }
+body.theme-lite .ri { color:#1a2740!important; }
+body.theme-lite .cin::placeholder { color:#90a4ae!important; }
+body.theme-lite .ib { color:#546e7a!important; border-color:#dde3ec!important; }
+
+/* ===== END COLOR FIX ===== */
